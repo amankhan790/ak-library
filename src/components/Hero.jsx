@@ -34,7 +34,7 @@ const features = [
 const Hero = () => {
     return (
         <>
-            <section className="relative w-full min-h-[70vh] sm:min-h-[75vh] md:min-h-[85vh] lg:min-h-[90vh] flex items-end overflow-hidden">
+            <section id='home' className="relative w-full min-h-[70vh] sm:min-h-[75vh] md:min-h-[85vh] lg:min-h-[90vh] flex items-end overflow-hidden">
                 <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                     style={{ backgroundImage: 'url(/Images/heroimg.png)' }}
