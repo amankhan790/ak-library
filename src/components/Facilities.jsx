@@ -128,7 +128,7 @@ const facilities = [
 
 const Facilities = () => {
     return (
-        <section id="facilities" className="py-14 sm:pt-16 md:pt-20 lg:pt-24">
+        <section id="facilities" className="pt-14 sm:pt-16 md:pt-20 lg:pt-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
                 <div className="text-center mb-10 sm:mb-12 md:mb-14">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900">

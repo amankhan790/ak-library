@@ -5,6 +5,7 @@ import StatsBar from './components/StatsBar'
 import About from './components/About'
 import Facilities from './components/Facilities'
 import Plans from './components/Plans'
+import Gallery from './components/Gallery'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <About />
       <Facilities />
       <Plans />
+      <Gallery />
     </main>
   )
 }

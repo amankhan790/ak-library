@@ -54,12 +54,14 @@ const featureIcon = (
 
 const Plans = () => {
   return (
-    <section id="pricing" className="py-6">
+
+    <section id="pricing" className="pt-6">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="bg-white px-4 py-8  sm:px-6 sm:py-10 lg:px-8 lg:py-12">
           <div className="mt-4 text-center sm:mt-5 ">
-            <h2 className="text-2xl font-semibold tracking-tight text-slate-950 sm:text-3xl md:text-4xl">
+            <h2 className="text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl md:text-4xl">
               Pricing Plans
+              <div className="mt-4 mx-auto h-1 w-14 rounded-full bg-amber-400" aria-hidden="true" />
             </h2>
             <p className="mt-3 text-sm text-slate-700 sm:text-base pb-5">
               Affordable plans for every serious learner.
