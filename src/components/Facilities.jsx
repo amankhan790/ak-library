@@ -128,7 +128,7 @@ const facilities = [
 
 const Facilities = () => {
     return (
-        <section id="facilities" className="bg-[#f6f6f4] py-14 sm:py-16 md:py-20 lg:py-24">
+        <section id="facilities" className="py-14 sm:pt-16 md:pt-20 lg:pt-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
                 <div className="text-center mb-10 sm:mb-12 md:mb-14">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
@@ -155,7 +155,7 @@ const Facilities = () => {
                                     </p>
                                 </div>
 
-                                <div className="sm:w-[44%] lg:w-[42%] shrink-0 bg-gray-100 p-2">
+                                <div className="sm:w-[44%] lg:w-[42%] shrink-0  p-2">
                                     <img
                                         src={facility.image}
                                         alt={facility.alt}
@@ -169,6 +169,7 @@ const Facilities = () => {
                 </div>
             </div>
         </section>
+
     )
 }
 

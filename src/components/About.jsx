@@ -52,7 +52,7 @@ const pillars = [
 
 const About = () => {
     return (
-        <section id="about" className="bg-white">
+        <section id="about">
             {/* Intro */}
             <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 py-12 sm:py-16 md:py-20">
                 <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 xl:gap-16">
@@ -75,7 +75,7 @@ const About = () => {
 
                     <div className="w-full lg:w-1/2 sm:mt-12">
                         <img
-                            src="/Images/heroimg.png"
+                            src="/images/heroimg.png"
                             alt="Students studying in A.K Library's spacious study hall"
                             className="w-full sm:h-56 sm:h-64 md:h-80 lg:h-96 object-cover rounded-2xl shadow-lg"
                             loading="lazy"
