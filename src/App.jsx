@@ -6,6 +6,8 @@ import About from './components/About'
 import Facilities from './components/Facilities'
 import Plans from './components/Plans'
 import Gallery from './components/Gallery'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
       <Facilities />
       <Plans />
       <Gallery />
+      <Contact />
+      <Footer />
     </main>
   )
 }
