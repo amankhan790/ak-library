@@ -59,7 +59,7 @@ const Navbar = () => {
 
             <div className='flex items-center gap-3'>
                 <button className='bg-amber-500 hover:bg-amber-600 text-black cursor-pointer font-bold py-2 px-4 rounded transition-all text-sm md:text-base'>
-                    Join Now
+                    <a href="#contact">Join Now</a>
                 </button>
 
                 <button

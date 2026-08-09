@@ -13,8 +13,8 @@ const contactDetails = [
     },
     {
         label: 'Phone',
-        value: '+91 99999 99999',
-        href: 'tel:+919999999999',
+        value: '+91 98186 70147',
+        href: 'https://wa.me/919818670147?text=Hello%20there',
         icon: (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
                 <path d="M22 16.9v2a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 3.18 2 2 0 0 1 4.1 1h2a2 2 0 0 1 2 1.72c.12.89.34 1.76.66 2.59a2 2 0 0 1-.45 2.11L7.44 8.59a16 16 0 0 0 6 6l1.17-1.17a2 2 0 0 1 2.11-.45c.83.32 1.7.54 2.59.66A2 2 0 0 1 22 16.9Z" />
@@ -92,6 +92,9 @@ const Contact = () => {
                                             {item.href ? (
                                                 <a
                                                     href={item.href}
+                                                    target={item.href?.startsWith('http') ? '_blank' : undefined}
+                                                    rel={item.href?.startsWith('http') ? 'noopener noreferrer' : undefined}
+                                                    aria-label={item.label === 'Phone' ? `Message ${item.value} on WhatsApp` : undefined}
                                                     className="mt-1 block text-sm leading-6 text-slate-600 transition-colors hover:text-amber-600 sm:text-[15px]"
                                                 >
                                                     {item.value}

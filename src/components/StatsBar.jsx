@@ -2,71 +2,94 @@ import React from 'react'
 
 const stats = [
     {
-        value: '108+',
-        label: 'Comfortable Seats',
+        title: 'Quiet & Peaceful',
+        subtitle: 'Distraction-free environment',
         icon: (
-            <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5" />
-                <path d="M4 12h16v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-5z" />
-                <path d="M8 19v2M16 19v2" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.9rem" height="1.9rem" viewBox="0 0 24 24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M8 16h8m-6-1v2m4-2v2m1.625-8.613v.53m-7.25-.53v.53m.375-.167c0-.414-.168-.75-.375-.75S8 8.336 8 8.75s.168.75.375.75s.375-.336.375-.75m7.25 0c0-.414-.168-.75-.375-.75s-.375.336-.375.75s.168.75.375.75s.375-.336.375-.75" />
+                </g>
+            </svg>
+
+        ),
+    },
+    {
+        title: 'AC Study Hall',
+        subtitle: 'Cool & comfortable all year',
+        icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M3 9h18M12 3v6M7 6l5 3 5-3" />
+                <path d="M5 21h14a2 2 0 0 0 2-2v-5H3v5a2 2 0 0 0 2 2z" />
             </svg>
         ),
     },
     {
-        value: '500+',
-        label: 'Happy Members',
+        title: 'High-Speed WiFi',
+        subtitle: 'Fast internet for uninterrupted study',
         icon: (
-            <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.9rem" height="1.9rem" viewBox="0 0 24 24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path fill="currentColor" d="M.69 6.997A17.93 17.93 0 0 1 12 3c4.285 0 8.22 1.497 11.31 3.997l-1.256 1.556A15.93 15.93 0 0 0 12 5C8.19 5 4.694 6.33 1.946 8.553zm3.141 3.89A12.95 12.95 0 0 1 12 8a12.95 12.95 0 0 1 8.169 2.886l-1.257 1.556A10.95 10.95 0 0 0 12 10c-2.618 0-5.023.915-6.912 2.442zm3.142 3.89A7.97 7.97 0 0 1 12 13c1.904 0 3.653.665 5.027 1.776l-1.257 1.556A5.98 5.98 0 0 0 12 15c-1.428 0-2.74.499-3.77 1.332zm3.142 3.89A3 3 0 0 1 12 18c.714 0 1.37.25 1.885.666L12 21z" />
+            </svg>
+
+        ),
+    },
+    {
+        title: 'Power Backup',
+        subtitle: 'Uninterrupted power supply',
+        icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M13 2L3 14h7v8l10-12h-7z" />
             </svg>
         ),
     },
     {
-        value: '100%',
-        label: 'Focused Environment',
+        title: 'CCTV Security',
+        subtitle: '24/7 security for your safety',
         icon: (
-            <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                <path d="M12 8l1.5 1.5L12 11l-1.5-1.5L12 8z" fill="currentColor" stroke="none" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.9rem" height="1.9rem" viewBox="0 0 512 512">
+                <path d="M0 0h512v512H0z" fill="none" />
+                <path fill="currentColor" d="M109.285 30.402c-14.82-.007-30.414 2.144-46.822 6.932l-.145.05a10 10 0 0 0-.496.173a10 10 0 0 0-.39.152a10 10 0 0 0-.47.218a10 10 0 0 0-.384.193a10 10 0 0 0-.463.273a10 10 0 0 0-.342.22a10 10 0 0 0-.435.32a10 10 0 0 0-.324.256a10 10 0 0 0-.397.357a10 10 0 0 0-.297.29a10 10 0 0 0-.37.405a10 10 0 0 0-.247.293a10 10 0 0 0-.342.463a10 10 0 0 0-.215.315a10 10 0 0 0-.282.472a10 10 0 0 0-.193.354a10 10 0 0 0-.233.497a10 10 0 0 0-.156.367a10 10 0 0 0-.178.512a10 10 0 0 0-.122.386a10 10 0 0 0-.17.688L33.42 156.55a9.5 9.5 0 0 0 5.625 10.614l82.023 34.578l31.62 162.133l-116.534 25.313a9.5 9.5 0 0 0-7.5 9.156l-1.062 76.47A9.5 9.5 0 0 0 39.967 484l146.468-46.813l24.123-4.677c.177.003.353.015.53.015c9.956 0 19.332-4.742 25.88-12.472c6.543-7.724 9.966-17.79 9.956-28.16v-.026c.006-6.574-1.372-13.037-4.045-18.855l-25.273-130.57l125.774 53.02l.155.058a10 10 0 0 0 .545.197a10 10 0 0 0 .35.11a10 10 0 0 0 .543.138a10 10 0 0 0 .416.086a10 10 0 0 0 .483.073a10 10 0 0 0 .482.05a10 10 0 0 0 .43.02a10 10 0 0 0 .54.004a10 10 0 0 0 .363-.01l83.406-5.28a9.5 9.5 0 0 0 7.97-5.438l50.522-106.954l.008-.014v-.002l.02-.047a9.5 9.5 0 0 0-5.51-13.137a93.5 93.5 0 0 0-23.956-9.148L152.273 36.688a10 10 0 0 0-.802-.268c-13.317-3.843-27.364-6.01-42.185-6.018zM82.938 44.125a9.5 9.5 0 0 1 3.687.72l290.75 116.53a9.51 9.51 0 0 1 5.77 10.79a9.5 9.5 0 0 0-.707 1.46l-.836 2.07a9.51 9.51 0 0 1-11.29 3.336L79.563 62.47a9.5 9.5 0 0 1 3.376-18.345zm357.308 128.367c4.4.038 8.75.508 13.068 1.404l14.74 5.72l-23.67 50.114c.912-4.058 1.378-8.082 1.335-11.855c-.1-8.732-2.94-15.95-7.845-19.563s-11.688-3.48-18.375.25c-1.65.92-3.305 2.063-4.906 3.375c.614-.822 1.19-1.72 1.687-2.687c1.417-2.757 2.248-5.952 2.22-8.78c-.032-2.835-.945-5.243-2.563-6.47a4.35 4.35 0 0 0-2.75-.906c-1.01.016-2.102.332-3.156.937c-2.107 1.212-4.08 3.52-5.5 6.282c-1.417 2.764-2.25 5.948-2.217 8.782c.03 2.833.945 5.242 2.562 6.47c1.617 1.225 3.798 1.147 5.906-.064c-3.416 3.562-6.546 7.9-9.092 12.72c-4.608 8.716-7.226 18.798-7.125 27.53s3 15.98 7.906 19.594c4.904 3.614 11.624 3.45 18.31-.28c4.178-2.332 8.29-6.018 11.91-10.582l-8.41 17.8l-62.75 4l37.253-92.39c14.635-7.746 28.272-11.513 41.463-11.4zm-298.078 38.145l16.014 6.752l29.732 139.555a32 32 0 0 0-9.342-1.41c-2.724 0-5.4.366-7.988 1.037l-28.416-145.935zm37.353 15.748l17.017 7.174l23 118.83a32 32 0 0 0-8.447-1.156c-1.643 0-3.266.14-4.865.39l-26.704-125.24zM211.09 370.3c3.863 0 8.258 1.978 11.472 5.772s5.433 9.89 5.424 15.795a9.47 9.532 0 0 0 0 .026c.01 5.905-2.21 12-5.423 15.795a17.1 17.1 0 0 1-5.188 4.142l-6.143 1.19c2.106-5.273 3.184-11.002 3.178-16.827v-.025a46 46 0 0 0-1.342-11.107a9.5 9.5 0 0 0-.193-2.248l-2.656-12.458c.29-.022.583-.055.87-.055zm-32.518 4.3c3.864 0 8.26 1.978 11.475 5.773s5.43 9.89 5.422 15.795a9.47 9.532 0 0 0 0 .025c.008 5.905-2.21 12-5.423 15.795c-3.215 3.795-7.61 5.774-11.475 5.774c-3.863 0-8.233-1.98-11.447-5.774s-5.458-9.89-5.45-15.795a9.47 9.532 0 0 0 0-.025c-.008-5.905 2.236-12 5.45-15.795s7.584-5.773 11.447-5.773zm-34.496 10.59a46 46 0 0 0-1.312 10.978v.025c-.01 10.37 3.41 20.437 9.953 28.16q1.259 1.486 2.648 2.817L46.78 461.875l.782-55.72l96.514-20.966z" />
             </svg>
+
         ),
     },
     {
-        value: '24/7',
-        label: 'CCTV Security',
+        title: 'Clean & Hygienic',
+        subtitle: 'Well maintained clean space',
         icon: (
-            <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z" />
-                <circle cx="12" cy="14" r="3" />
-                <circle cx="12" cy="14" r="1" fill="currentColor" stroke="none" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.9rem" height="1.9rem" viewBox="0 0 24 24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                    <path d="M15.28 19.72a3.145 3.145 0 0 1-.029-4.473a3.143 3.143 0 0 1 4.474.03m.92 2.222a3.143 3.143 0 0 1-3.143 3.143m-.524-8.643h1.047m-.523 0v2.356m5.5 2.62v1.047m0-.523h-2.357m1.117 3.519l-.742.74m.37-.37l-1.666-1.668m-1.698 3.279h-1.049m.525 0v-2.357m-5.5-2.619v-1.049m0 .525h2.356m-1.115-3.519l.74-.74m-.37.37l1.667 1.667m7.722-3.278l-11 11m-3.503-2.751h-4.5a3 3 0 0 1-3-3V9.749a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v.75M1 2.252l.621-.621A3 3 0 0 1 3.742.75h7.009" />
+                    <path d="M9.999 6.75h-6v-1.5a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5zM7 3.752v-3M7 9.75v5.999M4 12.75h5.998" />
+                </g>
             </svg>
+
         ),
     },
 ]
 
 const StatsBar = () => {
     return (
-        <section className="bg-[#0a1118] text-white">
-            <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4">
-                {stats.map((stat, index) => (
-                    <div
-                        key={stat.label}
-                        className={`flex items-center gap-3 sm:gap-4 px-4 sm:px-6 md:px-8 py-6 sm:py-8 lg:py-10
-                            ${index % 2 === 0 ? 'border-r border-gray-700/50' : ''}
-                            ${index < 2 ? 'border-b border-gray-700/50 lg:border-b-0' : ''}
-                            ${index < 3 ? 'lg:border-r lg:border-gray-700/50' : ''}
-                        `}
-                    >
-                        <div className="shrink-0 text-amber-400">{stat.icon}</div>
-                        <div>
-                            <p className="text-xl sm:text-2xl md:text-3xl font-bold leading-none">{stat.value}</p>
-                            <p className="mt-1 text-xs sm:text-sm text-white/80">{stat.label}</p>
+        <section className="bg-[#0a1118] text-white pt-8">
+            <div className="max-w-7xl mx-auto px-4">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-amber-400">Why Choose A.K Library?</h2>
+
+                <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                    {stats.map((stat, index) => (
+                        <div
+                            key={stat.title}
+                            className={`flex flex-col items-center text-center px-6 py-6 lg:py-8 ${index !== 0 ? 'lg:border-l lg:border-gray-600/40' : ''}`}
+                        >
+                            <div className="text-amber-400 mb-3">{stat.icon}</div>
+                            <p className="font-semibold text-white text-sm sm:text-base">{stat.title}</p>
+                            <p className="mt-2 text-xs text-white/90">{stat.subtitle}</p>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </section>
     )

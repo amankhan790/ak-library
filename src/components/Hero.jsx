@@ -83,6 +83,23 @@ const Hero = () => {
                             Book a Free Visit
                         </button>
                     </div>
+
+                </div>
+                <div className="hidden md:block bg-gray-900 absolute sm:right-18 bottom-10 sm:px-6 lg:px-12 py-5 flex flex-col gap-3 rounded-lg shadow-lg ">
+                    <span className="flex items-center gap-2 text-white mb-4">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-amber-400">
+                            <path d="M12 21s7-6.4 7-12a7 7 0 1 0-14 0c0 5.6 7 12 7 12Z" />
+                            <circle cx="12" cy="9" r="2.5" />
+                        </svg>
+                        <h2 className="text-white font-bold">Baghra, Muzaffarnagar</h2>
+
+                    </span>
+                    <span className="flex items-center gap-2 text-white">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" color="" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-amber-400">
+                            <path d="M22 16.9v2a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 3.18 2 2 0 0 1 4.1 1h2a2 2 0 0 1 2 1.72c.12.89.34 1.76.66 2.59a2 2 0 0 1-.45 2.11L7.44 8.59a16 16 0 0 0 6 6l1.17-1.17a2 2 0 0 1 2.11-.45c.83.32 1.7.54 2.59.66A2 2 0 0 1 22 16.9Z" />
+                        </svg>
+                        <h2 className="text-white font-bold">+91 98186 70147</h2>
+                    </span>
                 </div>
             </section>
         </>
