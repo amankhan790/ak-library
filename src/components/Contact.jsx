@@ -1,4 +1,5 @@
 import React from 'react'
+import Reveal from './Reveal'
 
 const contactDetails = [
     {
@@ -70,19 +71,19 @@ const Contact = () => {
     return (
         <section id="contact" className="bg-white py-12 sm:py-16 lg:py-22">
             <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-                <div className="text-center">
+                <Reveal as="div" className="text-center" distance={20}>
                     <h2 className="text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">Contact Us</h2>
                     <div className="mx-auto mt-4 h-1 w-14 rounded-full bg-amber-400" aria-hidden="true" />
-                </div>
-                <div className="mt-7 overflow-hidden rounded-[28px] border border-slate-200 bg-slate-50 shadow-[0_16px_40px_rgba(15,23,42,0.08)]">
+                </Reveal>
+                <Reveal as="div" delay={100} className="mt-7 overflow-hidden rounded-[28px] border border-slate-200 bg-slate-50 shadow-[0_16px_40px_rgba(15,23,42,0.08)]" distance={20}>
                     <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
-                        <div className="border-slate-200 px-5 py-8 sm:px-7 sm:py-10 lg:border-r lg:px-8 xl:px-10">
+                        <Reveal as="div" className="border-slate-200 px-5 py-8 sm:px-7 sm:py-10 lg:border-r lg:px-8 xl:px-10" distance={18}>
                             <h2 className="text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">Get In Touch</h2>
                             <p className="mt-2 text-sm font-medium  sm:text-base">We are here to help you.</p>
 
                             <div className="mt-8 space-y-6 sm:mt-10 sm:space-y-7">
-                                {contactDetails.map((item) => (
-                                    <div key={item.label} className="flex gap-4 sm:gap-5">
+                                {contactDetails.map((item, index) => (
+                                    <Reveal key={item.label} as="div" delay={index * 80} className="flex gap-4 sm:gap-5" distance={14}>
                                         <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-amber-200 bg-amber-50 text-amber-500 shadow-[0_8px_18px_rgba(251,191,36,0.12)]">
                                             {item.icon}
                                         </div>
@@ -103,12 +104,12 @@ const Contact = () => {
                                                 <p className="mt-1 whitespace-pre-line text-sm leading-6 text-slate-600 sm:text-[15px]">{item.value}</p>
                                             )}
                                         </div>
-                                    </div>
+                                    </Reveal>
                                 ))}
                             </div>
-                        </div>
+                        </Reveal>
 
-                        <div className="px-5 py-8 sm:px-7 sm:py-10 lg:px-8 xl:px-10">
+                        <Reveal as="div" delay={140} className="px-5 py-8 sm:px-7 sm:py-10 lg:px-8 xl:px-10" distance={18}>
                             <h2 className="text-2xl font-semibold tracking-tight text-slate-950 sm:text-3xl">Send Us a Message</h2>
 
                             <form className="mt-6 space-y-4 sm:mt-8" onSubmit={handleSubmit}>
@@ -148,14 +149,14 @@ const Contact = () => {
                                     Send Message
                                 </button>
                             </form>
-                        </div>
+                        </Reveal>
                     </div>
 
-                    <div className="border-t border-slate-200 px-5 py-8 sm:px-7 sm:py-10 lg:px-8 xl:px-10">
+                    <Reveal as="div" delay={220} className="border-t border-slate-200 px-5 py-8 sm:px-7 sm:py-10 lg:px-8 xl:px-10" distance={18}>
                         <h3 className="text-2xl font-semibold tracking-tight text-slate-950 sm:text-[28px]">Find Us</h3>
 
                         <div className="mt-5 grid gap-4 lg:grid-cols-2 lg:gap-5">
-                            <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-[0_12px_28px_rgba(15,23,42,0.08)]">
+                            <Reveal as="div" className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-[0_12px_28px_rgba(15,23,42,0.08)]" distance={16}>
                                 <div className="relative aspect-[16/11] min-h-[240px] w-full">
                                     <iframe
                                         title="A.K Library location map"
@@ -165,9 +166,9 @@ const Contact = () => {
                                         referrerPolicy="no-referrer-when-downgrade"
                                     />
                                 </div>
-                            </div>
+                            </Reveal>
 
-                            <div className="group overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-[0_12px_28px_rgba(15,23,42,0.08)]">
+                            <Reveal as="div" delay={90} className="group overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-[0_12px_28px_rgba(15,23,42,0.08)]" distance={16}>
                                 <div className="relative aspect-[16/11] min-h-[240px] w-full">
                                     <img
                                         src="/images/hero1.jpg"
@@ -177,10 +178,10 @@ const Contact = () => {
                                     />
                                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/12 via-transparent to-transparent" />
                                 </div>
-                            </div>
+                            </Reveal>
                         </div>
-                    </div>
-                </div>
+                    </Reveal>
+                </Reveal>
             </div>
         </section>
     )

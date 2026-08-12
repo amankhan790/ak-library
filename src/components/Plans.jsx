@@ -1,4 +1,5 @@
 import React from 'react'
+import Reveal from './Reveal'
 
 const planFeatures = ['AC Study Hall', 'High-Speed WIFI', 'Power Backup', 'RO Water', 'CCTV Security']
 
@@ -58,7 +59,7 @@ const Plans = () => {
     <section id="pricing" className="pt-6">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="bg-white px-4 py-8  sm:px-6 sm:py-10 lg:px-8 lg:py-12">
-          <div className="mt-4 text-center sm:mt-5 ">
+          <Reveal as="div" className="mt-4 text-center sm:mt-5 " distance={20}>
             <h2 className="text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl md:text-4xl">
               Pricing Plans
               <div className="mt-4 mx-auto h-1 w-14 rounded-full bg-amber-400" aria-hidden="true" />
@@ -66,11 +67,11 @@ const Plans = () => {
             <p className="mt-3 text-sm text-slate-700 sm:text-base pb-5">
               Affordable plans for every serious learner.
             </p>
-          </div>
+          </Reveal>
 
           <div className='grid sm:grid-cols-3 gap-6 mt-10'>
             {/* 1 Month Plan */}
-            <div className='bg-white rounded-lg shadow-xl p-6 text-center mb-5'>
+            <Reveal as="div" delay={80} distance={20} className='bg-white rounded-lg shadow-xl p-6 text-center mb-5'>
               <div className='items-center '>
                 <h2 className="text-xl font-bold mt-5">1 Month Plan</h2>
                 <p className="inline-block text-2xl font-bold mt-4 sm:mt-8 mr-2">₹ 500 </p><span className="text-sm font-bold text-slate-500">/1month</span>
@@ -88,10 +89,10 @@ const Plans = () => {
               <button className="mt-6 w-full rounded-lg bg-gray-800 px-4 py-3 text-white font-bold hover:bg-blue-900">
                 Join Now
               </button>
-            </div>
+            </Reveal>
 
             {/* 3 Month Plan */}
-            <div className='relative'>
+            <Reveal as="div" delay={160} distance={20} className='relative'>
               <div className='bg-white rounded-lg shadow-lg p-6 text-center  border-1 border-red-700'>
                 <div className='items-center '>
                   <h2 className="text-xl font-bold mt-5">3 Month Plan</h2>
@@ -115,10 +116,10 @@ const Plans = () => {
                   Most Populer
                 </div>
               </div>
-            </div>
+            </Reveal>
 
             {/* 6 Month Plan */}
-            <div className='bg-white rounded-lg shadow-lg p-6 text-center'>
+            <Reveal as="div" delay={240} distance={20} className='bg-white rounded-lg shadow-lg p-6 text-center'>
               <div className='items-center '>
                 <h2 className="text-xl font-bold mt-5">6 Month Plan</h2>
                 <p className="inline-block text-2xl font-bold mt-4 sm:mt-8 mr-2">₹ 2400 </p><span className="text-sm font-bold text-slate-500">/6 months</span>
@@ -136,19 +137,22 @@ const Plans = () => {
               <button className="mt-6 w-full rounded-lg bg-gray-800 px-4 py-3 text-white font-bold hover:bg-blue-900">
                 Join Now
               </button>
-            </div>
+            </Reveal>
 
           </div>
 
           <div className="mt-6 grid gap-3 sm:mt-8 sm:grid-cols-2 xl:grid-cols-4">
-            {benefits.map((benefit) => (
-              <div
+            {benefits.map((benefit, index) => (
+              <Reveal
+                as="div"
                 key={benefit.label}
+                delay={index * 70}
+                distance={16}
                 className="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-white px-4 py-6 text-center shadow-[0_6px_24px_rgba(15,23,42,0.04)] sm:min-h-28 sm:px-5"
               >
                 <div className="text-slate-700">{benefit.icon}</div>
                 <p className="mt-3 text-sm font-medium text-slate-700 sm:text-base">{benefit.label}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>

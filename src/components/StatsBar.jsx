@@ -1,4 +1,5 @@
 import React from 'react'
+import Reveal from './Reveal'
 
 const stats = [
     {
@@ -7,11 +8,9 @@ const stats = [
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" width="1.9rem" height="1.9rem" viewBox="0 0 24 24">
                 <path d="M0 0h24v24H0z" fill="none" />
-                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M8 16h8m-6-1v2m4-2v2m1.625-8.613v.53m-7.25-.53v.53m.375-.167c0-.414-.168-.75-.375-.75S8 8.336 8 8.75s.168.75.375.75s.375-.336.375-.75m7.25 0c0-.414-.168-.75-.375-.75s-.375.336-.375.75s.168.75.375.75s.375-.336.375-.75" />
-                </g>
+                <path fill="currentColor" d="M9 11a1 1 0 1 0-1-1a1 1 0 0 0 1 1m6 0a1 1 0 1 0-1-1a1 1 0 0 0 1 1m1 3a1 1 0 0 0-2 0h-1a1 1 0 0 0-2 0h-1a1 1 0 0 0-2 0a1 1 0 0 0 0 2a1 1 0 0 0 2 0h1a1 1 0 0 0 2 0h1a1 1 0 0 0 2 0a1 1 0 0 0 0-2M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2m0 18a8 8 0 1 1 8-8a8 8 0 0 1-8 8" />
             </svg>
+
 
         ),
     },
@@ -62,10 +61,9 @@ const stats = [
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" width="1.9rem" height="1.9rem" viewBox="0 0 24 24">
                 <path d="M0 0h24v24H0z" fill="none" />
-                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
-                    <path d="M15.28 19.72a3.145 3.145 0 0 1-.029-4.473a3.143 3.143 0 0 1 4.474.03m.92 2.222a3.143 3.143 0 0 1-3.143 3.143m-.524-8.643h1.047m-.523 0v2.356m5.5 2.62v1.047m0-.523h-2.357m1.117 3.519l-.742.74m.37-.37l-1.666-1.668m-1.698 3.279h-1.049m.525 0v-2.357m-5.5-2.619v-1.049m0 .525h2.356m-1.115-3.519l.74-.74m-.37.37l1.667 1.667m7.722-3.278l-11 11m-3.503-2.751h-4.5a3 3 0 0 1-3-3V9.749a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v.75M1 2.252l.621-.621A3 3 0 0 1 3.742.75h7.009" />
-                    <path d="M9.999 6.75h-6v-1.5a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5zM7 3.752v-3M7 9.75v5.999M4 12.75h5.998" />
-                </g>
+                <path d="M15.28 19.72a3.145 3.145 0 0 1-.029-4.473a3.143 3.143 0 0 1 4.474.03m.92 2.222a3.143 3.143 0 0 1-3.143 3.143m-.524-8.643h1.047m-.523 0v2.356m5.5 2.62v1.047m0-.523h-2.357m1.117 3.519l-.742.74m.37-.37l-1.666-1.668m-1.698 3.279h-1.049m.525 0v-2.357m-5.5-2.619v-1.049m0 .525h2.356m-1.115-3.519l.74-.74m-.37.37l1.667 1.667m7.722-3.278l-11 11m-3.503-2.751h-4.5a3 3 0 0 1-3-3V9.749a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v.75M1 2.252l.621-.621A3 3 0 0 1 3.742.75h7.009" />
+                <path d="M9.999 6.75h-6v-1.5a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5zM7 3.752v-3M7 9.75v5.999M4 12.75h5.998" />
+
             </svg>
 
         ),
@@ -76,18 +74,23 @@ const StatsBar = () => {
     return (
         <section className="bg-[#0a1118] text-white pt-8">
             <div className="max-w-7xl mx-auto px-4">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-amber-400">Why Choose A.K Library?</h2>
+                <Reveal as="h2" className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-amber-400" distance={20}>
+                    Why Choose A.K Library?
+                </Reveal>
 
                 <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                     {stats.map((stat, index) => (
-                        <div
+                        <Reveal
+                            as="div"
                             key={stat.title}
+                            delay={index * 90}
+                            distance={18}
                             className={`flex flex-col items-center text-center px-6 py-6 lg:py-8 ${index !== 0 ? 'lg:border-l lg:border-gray-600/40' : ''}`}
                         >
                             <div className="text-amber-400 mb-3">{stat.icon}</div>
                             <p className="font-semibold text-white text-sm sm:text-base">{stat.title}</p>
                             <p className="mt-2 text-xs text-white/90">{stat.subtitle}</p>
-                        </div>
+                        </Reveal>
                     ))}
                 </div>
             </div>

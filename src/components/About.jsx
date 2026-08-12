@@ -1,4 +1,5 @@
 import React from 'react'
+import Reveal from './Reveal'
 
 const pillars = [
     {
@@ -56,7 +57,7 @@ const About = () => {
             {/* Intro */}
             <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 py-12 sm:py-16 md:py-20">
                 <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 xl:gap-16">
-                    <div className="w-full lg:w-1/2">
+                    <Reveal as="div" className="w-full lg:w-1/2" distance={24}>
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
                             About A.K Library
                         </h2>
@@ -71,30 +72,36 @@ const About = () => {
                             We understand the needs of today&apos;s learners. That&apos;s why we have created
                             a space where you can focus without any distractions and perform at your best.
                         </p>
-                    </div>
+                    </Reveal>
 
-                    <div className="w-full lg:w-1/2 sm:mt-12">
+                    <Reveal as="div" delay={120} className="w-full lg:w-1/2 sm:mt-12" distance={24}>
                         <img
                             src="/images/heroimg.png"
                             alt="Students studying in A.K Library's spacious study hall"
                             className="w-full sm:h-56 sm:h-64 md:h-80 lg:h-96 object-cover rounded-2xl shadow-lg"
                             loading="lazy"
                         />
-                    </div>
+                    </Reveal>
                 </div>
             </div>
 
             {/* Mission, Vision, Values, Promise */}
             <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 pb-12 sm:pb-16 md:pb-20">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-6 xl:gap-10">
-                    {pillars.map((pillar) => (
-                        <div key={pillar.title} className="flex flex-col items-center text-center px-2 shadow-xl rounded-2xl py-10 hover:shadow-amber-400 transition-all">
+                    {pillars.map((pillar, index) => (
+                        <Reveal
+                            as="div"
+                            key={pillar.title}
+                            delay={index * 90}
+                            distance={18}
+                            className="flex flex-col items-center text-center px-2 shadow-xl rounded-2xl py-10 hover:shadow-amber-400 transition-all"
+                        >
                             <div className="text-amber-400 mb-4">{pillar.icon}</div>
                             <h3 className="text-base sm:text-lg font-bold text-gray-900">{pillar.title}</h3>
                             <p className="mt-2 text-sm sm:text-base text-gray-800 leading-relaxed px-2">
                                 {pillar.text}
                             </p>
-                        </div>
+                        </Reveal>
                     ))}
                 </div>
             </div>
@@ -102,11 +109,11 @@ const About = () => {
             {/* Quote Banner */}
             <div className="bg-[#0a1118] rounded-t-2xl">
                 <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 py-4 sm:py-4  flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-8">
-                    <blockquote className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-serif italic text-amber-400 leading-snug text-center sm:text-left max-w-3xl">
+                    <Reveal as="blockquote" className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-serif italic text-amber-400 leading-snug text-center sm:text-left max-w-3xl" distance={20}>
                         &ldquo;The right environment can change your thoughts, your thoughts can change your life.&rdquo;
-                    </blockquote>
+                    </Reveal>
 
-                    <div className="shrink-0 text-amber-400/80" aria-hidden="true">
+                    <Reveal as="div" delay={120} className="shrink-0 text-amber-400/80" distance={18}>
                         {/* <svg xmlns="http://www.w3.org/2000/svg" width="10em" height="10em" viewBox="0 0 24 24" className='rotate-'>
                             <path d="M0 0h24v24H0z" fill="none" />
                             <g fill="none" color="amber">
@@ -115,7 +122,7 @@ const About = () => {
                             </g>
                         </svg> */}
                         <img src="/book.png" alt="Book" className='w-50 h-50 rotate-[-15deg]' />
-                    </div>
+                    </Reveal>
                 </div>
             </div>
         </section>

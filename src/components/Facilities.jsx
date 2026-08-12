@@ -1,4 +1,5 @@
 import React from 'react'
+import Reveal from './Reveal'
 
 const facilities = [
     {
@@ -130,17 +131,20 @@ const Facilities = () => {
     return (
         <section id="facilities" className="pt-14 sm:pt-16 md:pt-20 lg:pt-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
-                <div className="text-center mb-10 sm:mb-12 md:mb-14">
+                <Reveal as="div" className="text-center mb-10 sm:mb-12 md:mb-14" distance={20}>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
                         Our Facilities
                     </h2>
                     <div className="mt-4 mx-auto h-1 w-14 rounded-full bg-amber-400" aria-hidden="true" />
-                </div>
+                </Reveal>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
-                    {facilities.map((facility) => (
-                        <article
+                    {facilities.map((facility, index) => (
+                        <Reveal
+                            as="article"
                             key={facility.title}
+                            delay={index * 80}
+                            distance={20}
                             className="group overflow-hidden rounded-2xl bg-white-300 shadow-[0_8px_30px_rgba(15,23,42,0.08)] ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1"
                         >
                             <div className="flex h-full flex-col sm:flex-row items-stretch">
@@ -164,7 +168,7 @@ const Facilities = () => {
                                     />
                                 </div>
                             </div>
-                        </article>
+                        </Reveal>
                     ))}
                 </div>
             </div>

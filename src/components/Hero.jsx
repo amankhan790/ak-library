@@ -1,4 +1,5 @@
 import React from 'react'
+import Reveal from './Reveal'
 
 const features = [
     {
@@ -47,29 +48,32 @@ const Hero = () => {
                 />
 
                 <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pb-10 sm:px-8 sm:pb-12 md:px-12 md:pb-16 lg:pb-20">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white max-w-3xl">
+                    <Reveal as="h1" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white max-w-3xl" distance={28}>
                         Find Your{' '} <br />
                         <span className="text-amber-400">Perfect Study</span>{' '} <br />
                         Space
-                    </h1>
+                    </Reveal>
 
-                    <p className="mt-4 sm:mt-5 text-sm sm:text-base md:text-lg text-white/90 max-w-74 sm:max-w-sm leading-relaxed">
+                    <Reveal as="p" delay={90} className="mt-4 sm:mt-5 text-sm sm:text-base md:text-lg text-white/90 max-w-74 sm:max-w-sm leading-relaxed" distance={22}>
                         A peaceful, comfortable and inspiring environment designed for serious learners.
-                    </p>
+                    </Reveal>
 
                     <ul className="mt-6 sm:mt-8 flex flex-wrap gap-2 sm:gap-3">
-                        {features.map((feature) => (
-                            <li
+                        {features.map((feature, index) => (
+                            <Reveal
+                                as="li"
                                 key={feature.label}
+                                delay={160 + index * 90}
+                                distance={18}
                                 className="flex items-center gap-2 rounded-full bg-black/45 backdrop-blur-sm border border-white/10 px-3 py-2 sm:px-4 sm:py-2.5 text-amber-400 text-xs sm:text-sm font-medium"
                             >
                                 {feature.icon}
                                 <span>{feature.label}</span>
-                            </li>
+                            </Reveal>
                         ))}
                     </ul>
 
-                    <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+                    <Reveal as="div" delay={360} className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto" distance={20}>
                         <button
                             type="button"
                             className="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-black font-bold py-3 px-6 sm:px-8 rounded-lg transition-all cursor-pointer text-sm sm:text-base"
@@ -82,10 +86,10 @@ const Hero = () => {
                         >
                             Book a Free Visit
                         </button>
-                    </div>
+                    </Reveal>
 
                 </div>
-                <div className="hidden md:block bg-gray-900 absolute sm:right-18 bottom-10 sm:px-6 lg:px-12 py-5 flex flex-col gap-3 rounded-lg shadow-lg ">
+                <Reveal as="div" delay={420} distance={18} className="hidden md:block bg-gray-900 absolute sm:right-18 bottom-10 sm:px-6 lg:px-12 py-5 flex flex-col gap-3 rounded-lg shadow-lg ">
                     <span className="flex items-center gap-2 text-white mb-4">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-amber-400">
                             <path d="M12 21s7-6.4 7-12a7 7 0 1 0-14 0c0 5.6 7 12 7 12Z" />
@@ -100,7 +104,7 @@ const Hero = () => {
                         </svg>
                         <h2 className="text-white font-bold">+91 98186 70147</h2>
                     </span>
-                </div>
+                </Reveal>
             </section>
         </>
     )
